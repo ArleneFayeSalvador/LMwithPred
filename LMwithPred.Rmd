@@ -34,3 +34,8 @@ basicNN <- ggplot(dataF,aes(y=SIMS,x=ARM))
 ```{r}
 basicNN + geom_point()+ geom_smooth(method=lm)
 ```
+
+```{r}
+model.1 <- lm(SIMS~ARM,data=dataF)
+summary.lm(model.1)
+```
