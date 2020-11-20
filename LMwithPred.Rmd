@@ -1,0 +1,25 @@
+---
+title: "LMwithPred"
+author: "Arlene Faye Salvador"
+date: "11/5/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+require(tidyverse)
+require(tigerstats)
+```
+
+We are using a linear model to predict a simulated strength score based on arm strength and or grip strength.
+
+```{r}
+dataF <- read.csv(file="http://onlinestatbook.com/case_studies_rvls/physical_strength/data.txt",sep="",header=TRUE)  
+```  
+
+Scatterplot SIMS is a function of ARM
+
+```{r}
+plot(SIMS~ARM,data=dataF)
+```
+
