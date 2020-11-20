@@ -23,3 +23,14 @@ Scatterplot SIMS is a function of ARM
 plot(SIMS~ARM,data=dataF)
 ```
 
+##Now with ggplot - first select the basic data
+
+```{r}
+basicNN <- ggplot(dataF,aes(y=SIMS,x=ARM))
+```
+
+##Now add in scatterplot
+
+```{r}
+basicNN + geom_point()+ geom_smooth(method=lm)
+```
